@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import "antd/dist/antd.css";
 
 export const HeaderWrapped = styled.div`
   font-size: 14px;
@@ -54,7 +55,7 @@ export const HeaderLeft = styled.div`
           background-image: url(${require("@/assets/images/sprite_01.png")});
           background-position: -190px 0;
           top: 20px;
-          right: -15px
+          right: -15px;
         }
       }
 
@@ -62,6 +63,17 @@ export const HeaderLeft = styled.div`
         color: #fff;
         background: #000;
         text-decoration: none;
+      }
+
+      .active .icon {
+        position: absolute;
+        display: inline-block;
+        width: 12px;
+        height: 7px;
+        bottom: -1px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-position: -226px 0;
       }
     }
   }
@@ -71,5 +83,39 @@ export const HeaderLeft = styled.div`
 
 export const HeaderRight = styled.div`
   display: flex;
+  align-items: center;
+  color: #ccc;
+  font-size: 12px;
+
+  .search {
+    width: 158px;
+    height: 32px;
+    border-radius: 16px;
+
+    input {
+      &::placeholder{
+        font-size: 12px;
+      }
+    }
+  }
+
+  .center {
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #666;
+    border-radius: 16px;
+    margin: 0 16px;
+    background-color: transparent;
+  }
+  
+  .login {
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
 `
 

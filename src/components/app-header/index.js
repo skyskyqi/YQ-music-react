@@ -1,5 +1,9 @@
 import React, { memo } from 'react';
 
+import { NavLink } from 'react-router-dom';
+import {Input} from "antd";
+import {SearchOutlined} from "@ant-design/icons"
+
 import {
   HeaderWrapped,
   HeaderLeft,
@@ -7,13 +11,17 @@ import {
 } from './style';
 import { headerLinks } from '@/commons/local-data';
 
-import { NavLink } from 'react-router-dom'
 
 export default memo(function YQAppHeader() {
 
   const showSelectItem = (item, index) => {
     if (index < 3) {
-      return <NavLink to={item.link} exact>{item.title}</NavLink>
+      return (
+        <NavLink to={item.link} exact>
+          {item.title}
+          <i className="sprite_01 icon" ></i>
+        </NavLink>
+      )
     } else {
       return <a href={item.link}>{item.title}</a>
     }
@@ -37,7 +45,10 @@ export default memo(function YQAppHeader() {
           </div>
         </HeaderLeft>
         <HeaderRight>
-          right
+          <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined/>}/>
+          <div className="center">创作者中心</div>
+          <div className='login'>登陆</div>
+
         </HeaderRight>
       </div>
       <div className='divider'></div>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css';
 
 export const HeaderWrapped = styled.div`
   font-size: 14px;
@@ -59,7 +59,7 @@ export const HeaderLeft = styled.div`
         }
       }
 
-      &:hover a, a.active {
+      &:hover a, .active {
         color: #fff;
         background: #000;
         text-decoration: none;

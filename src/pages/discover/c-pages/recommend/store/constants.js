@@ -1,0 +1,2 @@
+export const CHANGE_BANNAR = "CHANGE_BANNAR";
+export const CHANGE_RECOMMEND = "CHANGE_RECOMMEND";

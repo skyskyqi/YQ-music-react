@@ -1,0 +1,1 @@
+export const HOTRECOMMEND_LIMIT = 8;

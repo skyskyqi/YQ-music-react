@@ -13,14 +13,14 @@ import policeImg from "@/assets/images/police.png";
 function advList(item, index) {
   if(index <= 6) {
     return (
-      <span className='span-contain'>
+      <span className='span-contain' key={item.link}>
         <a href={item.link}>{item.title}</a>
         <span>|</span>
       </span>
     )
   } else {
     return (
-      <span className='span-contain'>
+      <span className='span-contain' key={item.link}>
         <a href={item.link}>{item.title}</a>
       </span>
     )
@@ -49,7 +49,7 @@ export default memo(function YQAppFooter() {
             <div className="footer_2">
               <div>粤B2-20090191-18  工业和信息化部备案管理系统网站 </div>
               <div>
-                <img src={policeImg}></img>
+                <img src={policeImg} alt="police"></img>
                 <span>浙公网安备 33010902002564号</span>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default memo(function YQAppFooter() {
               footerImg.map((item, index) => {
                 return (
                   <li className="item" key={item.link}>
-                    <a className="link" href={item.link}></a>
+                    <a className="link" href={item.link} rel="noopener noreferrer" target="_blank"> </a>
                     <span className='title'>{item.title}</span>
                   </li>
                 )
